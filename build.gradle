@@ -1,5 +1,8 @@
 buildscript {
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
         mavenLocal()
         gradlePluginPortal()
         mavenCentral()
@@ -27,9 +30,11 @@ buildscript {
 }
 
 repositories {
+    maven {
+      url 'https://maven.aliyun.com/repository/public/'
+    }
     mavenLocal()
     mavenCentral()
-    jcenter()
     maven { 
         url "https://oss.sonatype.org/content/repositories/snapshots" 
         mavenContent { snapshotsOnly() }
@@ -77,7 +82,18 @@ dependencies {
         }
     }
     // Other CAS dependencies/modules may be listed here...
-    // implementation "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
+    // implementation "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"	
+    implementation "org.apereo.cas:cas-server-support-rest-authentication:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-ldap:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+}
+
+task showRepos {
+    doLast {
+        repositories.each {
+            println "repository: ${it.name} ('${it.url}')"
+        }
+    }
 }
 
 tasks.findByName("jibDockerBuild")
