@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>登录成功 数字国戏</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.bootstrap.css.bootstrap')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.font.fontawesome.css.fontawesome')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.animate.animate')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.csshamburgers.hamburgers')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.select2.select2')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.css.util')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.css.main')}}">
+</head>
+<body id="cas">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img th:src="@{${#themes.code('DHD.img.logo')}}" alt="数字国戏">
+				</div>
+
+				<div class="w-50 m-auto mdc-card p-4">
+            
+          <h2 th:utext="#{screen.success.header}">Log In Successful</h2>
+          <p th:utext="#{screen.success.success(${authentication.principal.id})}">You, <strong>username</strong>, have successfully logged into the Central Authentication Service. This is what CAS knows about you:However, you are seeing this page because CAS does not know about your target destination and how to get you there. Examine the authentication request again and make sure a target service/application that is authorized and registered with CAS is specified.</p>
+          
+          <p th:utext="#{screen.success.security}">
+              When you are finished, for security reasons, please <a href="logout">log out</a> and exit your web browser.
+          </p>
+
+          <div class="text-center p-t-136">
+						<a class="txt2" href="https://www.nacta.edu.cn/">
+							中国戏曲学院
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+        </div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script th:src="@{${#themes.code('DHD.js.jquery')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.popper')}}"></script>
+	<script th:src="@{${#themes.code('DHD.js.bootstrap')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.select2')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.tilt')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+                
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.main')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>登录成功 数字国戏</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.bootstrap.css.bootstrap')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.font.fontawesome.css.fontawesome')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.animate.animate')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.csshamburgers.hamburgers')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.vendor.select2.select2')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.css.util')}}">
+	<link rel="stylesheet" th:href="@{${#themes.code('DHD.css.main')}}">
+</head>
+<body id="cas">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img th:src="@{${#themes.code('DHD.img.logo')}}" alt="数字国戏">
+				</div>
+
+				<div class="w-50 m-auto mdc-card p-4">
+          <h2 class="banner-heading" th:utext="#{screen.logout.header}">Logout successful</h2>
+          <p class="banner-message" th:utext="#{screen.logout.success}">You have successfully logged out of the Central Authentication
+              Service. You may <a href="login">log in</a> again.</p>
+          <p class="banner-message" th:utext="#{screen.logout.security}">For security reasons, exit your web browser.</p>
+
+          <div class="text-center p-t-136">
+						<a class="txt2" href="https://www.nacta.edu.cn/">
+							中国戏曲学院
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+      </div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script th:src="@{${#themes.code('DHD.js.jquery')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.popper')}}"></script>
+	<script th:src="@{${#themes.code('DHD.js.bootstrap')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.select2')}}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.tilt')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+                
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{${#themes.code('DHD.js.main')}}"></script>
+
+</body>
+</html>
