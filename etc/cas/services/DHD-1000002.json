@@ -1,0 +1,20 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^(http|https)://.*",
+  "name": "DHD",
+  "id": 1000002,
+  "theme": "DHD",
+  "description": "Allow from all",
+  "evaluationOrder": 1,
+  "accessStrategy":
+  {
+    "@class": "org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy",
+    "enabled": true,
+    "ssoEnabled": true,
+    "requireAllAttributes": true,
+    "caseInsensitive": false
+  },
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

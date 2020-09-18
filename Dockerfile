@@ -3,14 +3,14 @@ FROM adoptopenjdk/openjdk11:alpine-slim AS overlay
 RUN mkdir -p cas-overlay
 COPY ./gradle/ cas-overlay/gradle/
 COPY ./gradlew ./settings.gradle ./build.gradle ./gradle.properties /cas-overlay/
-WORKDIR cas-overlay
+WORKDIR /cas-overlay
 RUN mkdir -p ~/.gradle \
     && chmod 750 ./gradlew \
     && echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties \
     && echo "org.gradle.configureondemand=true" >> ~/.gradle/gradle.properties
 RUN pwd && ls
 RUN ./gradlew --version && ./gradlew task --all;
-#RUN ./gradlew build || return 0
+RUN ./gradlew build || return 0
 
 COPY ./src /cas-overlay/src/
 

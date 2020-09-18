@@ -173,8 +173,8 @@ iframe {
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
   background: linear-gradient(-135deg, #c850c0, #4158d0); */
-  background-image: url("../images/bg1.jpg");
-  background-position: center middle;
+  background-image: url("../images/bg2.jpg");
+  background-position: center;
   background-size: cover;
 }
 
